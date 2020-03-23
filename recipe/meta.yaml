@@ -10,7 +10,7 @@ source:
 
 build:
   number: 1
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -36,12 +36,10 @@ test:
     - bottleneck.move
   commands:
     - python -c "import bottleneck; bottleneck.test()"
-    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
-    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
   home: https://github.com/pydata/bottleneck
-  license: BSD 2-Clause
+  license: BSD-2-Clause
   license_family: BSD
   license_file: LICENSE
   summary: Fast NumPy array functions written in Cython.
