@@ -1,11 +1,11 @@
-About bottleneck
-================
+About bottleneck-feedstock
+==========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/bottleneck-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/pydata/bottleneck
 
 Package license: BSD-2-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/bottleneck-feedstock/blob/main/LICENSE.txt)
 
 Summary: Fast NumPy array functions written in Cython.
 
