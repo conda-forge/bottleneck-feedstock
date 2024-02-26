@@ -10,7 +10,7 @@ source:
 
 build:
   number: 0
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   build:
@@ -29,6 +29,7 @@ requirements:
 test:
   requires:
     - pytest
+    - pip
   imports:
     - bottleneck
     - bottleneck.slow
@@ -38,6 +39,7 @@ test:
     - bottleneck.nonreduce_axis
     - bottleneck.move
   commands:
+    - pip check
     - python -c "import bottleneck; bottleneck.test()"
 
 about:
