@@ -1,4 +1,4 @@
-{% set version = "1.4.0" %}
+{% set version = "1.4.1" %}
 
 package:
   name: bottleneck
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/B/Bottleneck/bottleneck-{{ version }}.tar.gz
-  sha256: beb36df519b8709e7d357c0c9639b03b885ca6355bbf5e53752c685de51605b8
+  sha256: 58c66619db62291c9ca3b497b05f40f7b1ff9ac010b88bff1925f3101dae2c89
 
 build:
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
@@ -25,6 +25,7 @@ requirements:
     - setuptools
     - numpy
   run:
+    - numpy
     - python
 
 test:
