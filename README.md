@@ -11,11 +11,10 @@ Summary: Fast NumPy array functions written in Cython.
 
 Development: https://github.com/pydata/bottleneck
 
-Documentation: https://bottleneck.readthedocs.io
+Documentation: https://bottleneck.readthedocs.io/
 
 Bottleneck is a collection of fast NumPy array functions written in
 Cython.
-
 
 Current build status
 ====================
