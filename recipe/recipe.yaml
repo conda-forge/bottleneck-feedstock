@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "1.6.0"
+  version: 1.6.1
 
 package:
   name: bottleneck
@@ -9,10 +9,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/B/Bottleneck/bottleneck-${{ version }}.tar.gz
-  sha256: 028d46ee4b025ad9ab4d79924113816f825f62b17b87c9e1d0d8ce144a4a0e31
+  sha256: d87fd88e01132b7211131c3d12c242e6f30e36fc95786c97d97c74ae26d4c421
 
 build:
-  number: 4
+  number: 0
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
@@ -31,9 +31,8 @@ requirements:
     - versioneer
     - numpy
   run:
-    - numpy
+    - numpy >=2.0.0
     - python
-
 tests:
   - python:
       imports:
